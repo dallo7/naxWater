@@ -129,8 +129,15 @@ def build_lstm_model(lookback, units=50, dropout_rate=0.2, layers=2):
 
 
 # Initialize the Dash app
-app = dash.Dash(__name__)
+app = dash.Dash(
+    __name__,
+    suppress_callback_exceptions=True,
+    external_stylesheets=[dbc.themes.LUMEN, dbc.icons.FONT_AWESOME],
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}]
+)
+app.title = "Aqua-Predict | BI-LSTM Water Forecasting"
 
+server = app.server
 # Try to load real data
 real_data = load_and_prepare_data()
 if real_data is not None:
@@ -787,4 +794,5 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, lookback, un
 
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=8055)
