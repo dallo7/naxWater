@@ -108,7 +108,7 @@ app = dash.Dash(
     meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}]
 )
 
-app.title = "Aqua-Predict | Water Supply Forecasting with ARIMA"
+app.title = "Aqua-Predict | ARIMA"
 server = app.server
 
 # Try to load real data
@@ -623,4 +623,5 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, p_order, d_o
 
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=8051)
