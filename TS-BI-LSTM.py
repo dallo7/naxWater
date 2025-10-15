@@ -3,6 +3,7 @@ from dash import dcc, html, Input, Output, State
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 import pandas as pd
+import dash_bootstrap_components as dbc
 import numpy as np
 from datetime import datetime, timedelta
 from sklearn.preprocessing import MinMaxScaler
@@ -796,3 +797,4 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, lookback, un
 if __name__ == '__main__':
 
     app.run(debug=True, port=8055)
+
