@@ -1466,6 +1466,9 @@ def render_admin_tab_content(active_tab):
                 html.Div([
                     html.H1("💧 Water Supply Forecasting with Facebook Prophet",
                             style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px'}),
+
+                    html.P("FBProphet with XAI components For water Forecasting",
+                           style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'}),
                     html.Br(),
                     html.Br(),
                     html.Br()
@@ -1582,7 +1585,6 @@ def render_admin_tab_content(active_tab):
                     html.Div([
                         html.H1("💧 Dynamic Water Rationing Scheduler",
                                 style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px'}),
-                        HTML.BR(),
                         html.P("Multi-Output Model for Optimal Water Distribution Scheduling",
                                style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'})
                     ]),
@@ -1640,7 +1642,7 @@ def render_admin_tab_content(active_tab):
                     html.Div([
                         html.H1("💧 Water Distribution Scheduler & Price Analysis",
                                 style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px'}),
-                        html.P("AI model predicting Price, Time, and Zone for optimal water distribution",
+                        html.P("Predicting Price, Time, and Zone for optimal water distribution",
                                style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'})
                     ]),
 
@@ -3222,6 +3224,4 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, changepoint_
 
 
 if __name__ == '__main__':
-
     app.run(debug=True, port=8709)
-
