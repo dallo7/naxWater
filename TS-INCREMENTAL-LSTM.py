@@ -134,8 +134,15 @@ def build_incremental_lstm_model(batch_size, lookback, units=50, dropout_rate=0.
     return model
 
 
-# Initialize the Dash app
-app = dash.Dash(__name__)
+app=dash.Dash(
+    __name__,
+    suppress_callback_exceptions=True,
+    external_stylesheets=[dbc.themes.LUMEN, dbc.icons.FONT_AWESOME],
+    meta_tags=[{"name": "viewport", "content": "width=device-width, initial-scale=1"}]
+)
+
+app.title = "Aqua-Predict | INCREMENTAL LSTM"
+server = app.server
 
 # Try to load real data
 real_data = load_and_prepare_data()
@@ -985,3 +992,4 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, lookback, un
 
 if __name__ == '__main__':
     app.run(debug=True, port=8972)
+
