@@ -1583,7 +1583,7 @@ def render_admin_tab_content(active_tab):
                         html.H1("💧 Dynamic Water Rationing Scheduler",
                                 style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px'}),
                         HTML.BR(),
-                        # html.P("AI-Powered Multi-Output Model for Optimal Water Distribution Scheduling",
+                        html.P("Multi-Output Model for Optimal Water Distribution Scheduling",
                                style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'})
                     ]),
 
@@ -1634,7 +1634,7 @@ def render_admin_tab_content(active_tab):
 
             ])), lg=6, className="mb-4"),
             dbc.Col(dbc.Card(dbc.CardBody([
-                html.H5("Price Discrimination Model Simulator"),
+                # html.H5("Price Discrimination Model Simulator"),
 
                 html.Div([
                     html.Div([
