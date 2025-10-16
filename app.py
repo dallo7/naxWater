@@ -1461,7 +1461,7 @@ def render_admin_tab_content(active_tab):
             SUPPLY_AREAS_OPTIONS[0]['value'] if SUPPLY_AREAS_OPTIONS else None)
 
         return dbc.Card(dbc.CardBody([
-            html.H5("Prophet Forecast & Explainable AI"),
+            # html.H5("Prophet Forecast & Explainable AI"),
             html.Div([
                 html.Div([
                     html.H1("💧 Water Supply Forecasting with Facebook Prophet",
@@ -3224,3 +3224,4 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, changepoint_
 if __name__ == '__main__':
 
     app.run(debug=True, port=8709)
+
