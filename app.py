@@ -1577,12 +1577,13 @@ def render_admin_tab_content(active_tab):
         consumer_options = [{'label': i['username'], 'value': i['id']} for i in consumer_options]
         return dbc.Row([
             dbc.Col(dbc.Card(dbc.CardBody([
-                html.H5("Dynamic Rationing Schedule (Water Rationing Model)"),
+                # html.H5("Dynamic Rationing Schedule (Water Rationing Model)"),
                 html.Div([
                     html.Div([
                         html.H1("💧 Dynamic Water Rationing Scheduler",
                                 style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px'}),
-                        html.P("AI-Powered Multi-Output Model for Optimal Water Distribution Scheduling",
+                        HTML.BR(),
+                        # html.P("AI-Powered Multi-Output Model for Optimal Water Distribution Scheduling",
                                style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'})
                     ]),
 
@@ -3221,4 +3222,5 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, changepoint_
 
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=8709)
