@@ -10,6 +10,8 @@ from sklearn.metrics import mean_absolute_error, mean_squared_error
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import LSTM, Dense, Dropout, Input as KerasInput
 import warnings
+import dash_bootstrap_components as dbc
+
 
 warnings.filterwarnings('ignore')
 
@@ -992,4 +994,5 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, lookback, un
 
 if __name__ == '__main__':
     app.run(debug=True, port=8972)
+
 
