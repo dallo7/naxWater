@@ -156,9 +156,10 @@ app.layout = html.Div([
     html.Div([
         html.H1("💧 Water Supply Forecasting with Bi-LSTM Neural Networks",
                 style={'textAlign': 'center', 'color': '#2c3e50', 'marginBottom': '10px'}),
-        html.P(
-            f"Bidirectional LSTM for enhanced time series prediction with forward & backward context - {data_source}",
-            style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'})
+        html.Br(),
+        # html.P(
+        #     f"Bidirectional LSTM for enhanced time series prediction with forward & backward context - {data_source}",
+        #     style={'textAlign': 'center', 'color': '#7f8c8d', 'marginBottom': '30px'})
     ]),
 
     # Control panel
@@ -797,4 +798,5 @@ def update_forecast(n_clicks, scenario, noise_level, forecast_days, lookback, un
 if __name__ == '__main__':
 
     app.run(debug=True, port=8055)
+
 
